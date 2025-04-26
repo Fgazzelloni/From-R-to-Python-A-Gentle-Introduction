@@ -1,0 +1,4 @@
+- source: presentation.qmd
+  quarto-pub:
+    - id: e48e4224-8c42-4cd6-b5c0-5285dcc9f256
+      url: https://rladiesrome.quarto.pub/from-r-to-python-a-gentle-introduction

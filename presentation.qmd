@@ -1,0 +1,173 @@
+---
+title: "From R to Python: A Gentle Introduction"
+date: "2025-04-27"
+author: Federica Gazzelloni<br><span style="color:#ff66c4;">R-Ladies Rome</span>
+footer: "*[From R to Python: A Gentle Introduction](https://github.com/Fgazzelloni/From-R-to-Python-A-Gentle-Introduction)* | [rladiesrome.org](http://www.rladiesrome.org)"
+logo: images/logo.png 
+logo-alt: "rladiesrome"
+format: 
+  revealjs:
+    theme: [blood, custom.scss]
+    scrollable: true
+    transition: slide
+    background-transition: fade
+    incremental: true
+    slide-number: true
+editor: visual
+---
+
+# Welcome Everyone! {background-image="images/logo.png" background-size="500px" background-position="right"}
+
+# Disclaimer {.smaller}
+
+This talk is recorded and will be posted on [Youtube \@rladiesrome](https://www.youtube.com/@rladiesrome)
+
+Please remember that all our attendees are expected to adhere to our `Code of Conduct` 👉 <https://rladies.org/coc/>
+
+<br>
+
+**`We ensure a safe, inclusive, and harassment-free space for learning. We are committed to providing a respectful environment where everyone feels welcome to learn, connect, and grow.`**
+
+# Who we are?
+
+```         
+rladies_global |>
+  filter(city %in% c('Rome'))
+```
+
+**`R-Ladies Rome` is a local chapter of `R-Ladies Global` dedicated to promoting `continous learning` in the Open Source Community. Our monthly meetings provide a platform to discuss current trends and hot topics, such as `Python` 🐍**
+
+# Join us! {background-image="images/background-joinus.png" background-size="800px" background-position="right"}
+
+If you’d like to join our team and contribute to our community, we have a few open positions!
+
+<br>
+
+Fill out the form here 👇 <https://forms.gle/SkBiab8LhLcehpKu6>
+
+## Learning Objectives 🤓 {background-image="images/background-rtopy.png" background-size="800px" background-position="right"}
+
+::: notes
+Explore similarities and key differences to build on your existing skills From data wrangling to basic summaries and plots Use pandas, matplotlib, and others to analyze and visualize data.
+:::
+
+-   Transition from R to Python
+-   Learn how to perform basic tasks in Python
+-   Get hands-on with essential Python libraries
+
+## Python Quick Takes
+
+::: notes
+Provides the global interpreter lock (GIL), a mechanism that prevents the interpreter from executing more than one Python instruction at a time
+:::
+
+. . .
+
+> 📣 Python is a programming language that lets you work quickly and integrate systems more effectively.
+
+-   First appearance in 1991
+-   Integrates C, C++, and FORTRAN code (Glue)
+-   Defined as an interpreted programming language
+-   Provides the global interpreter lock (GIL)
+
+## R [vs]{style="color:#ff66c4;"} Python 🤺 {.smaller}
+
+| Use Case | R | Python |
+|------------------|---------------------------|---------------------------|
+| **Best for** | Statistical analysis, data visualization | General-purpose programming |
+| **Learning curve** | Intuitive for data analysis and stats | Accessible for general programming |
+| **Visualization** | `ggplot2` | `matplotlib` |
+| **Data handling** | `data.frame`, `tidyverse` | `pandas`, `numpy` |
+| **Machine Learning** | `caret`, `tidymodels` | `scikit-learn`, `TensorFlow` |
+| **Reproducible reporting** | Quarto, RMarkdown | Jupyter Notebooks, Quarto |
+| **Community** | Strong in academia and research | Strong in industry and web development |
+
+## Essential Python Libraries📚 {.smaller}
+
+::: notes
+data frames are built into the R programming language and its standard library. As a result, many features found in pandas are typically either part of the R core implementation or provided by add-on packages
+:::
+
+-   `NumPy` (Numerical Python)
+-   `pandas` (high-level data structures and functions)
+-   `matplotlib` (plots and other two-dimensional data visualizations)
+-   `SciPy` (collection of scientific packages)
+-   `scikit-learn` (machine learning toolkit)
+-   `statsmodels` (statistical modeling)
+
+## Install Python
+
+::: notes
+integrated development environment (IDE)
+:::
+
+-   Download: <https://www.python.org/downloads/>
+-   Install the latest version of `Python3`
+-   Install an IDE (Integrated Development Environment):
+    -   `VSCode` - Visual Studio Code (IDE)
+
+# Hands-on: Python Basics
+
+## Install Python libraries
+
+-   Use `pip` (Python package manager) to install libraries
+-   Open a terminal and type:
+
+. . .
+
+``` bash
+python3 -m pip install pandas
+python3 -m pip install matplotlib
+python3 -m pip install numpy
+```
+
+## Load libraries
+
+-   Use `import` to load libraries
+-   Use `as` to give a library an alias
+
+. . .
+
+``` python
+import pandas as pd
+```
+
+## Use a function from a library
+
+::: notes
+You do need to specify which library the functions you are using come from - such as pd.--- Use the library name followed by a dot and the function name
+:::
+
+. . .
+
+::::: columns
+::: {.column width="50%"}
+```{r}
+#| eval: false
+#| echo: true
+data.frame(a = c(1, 2, 3, 4),
+           b = c(5, 6, 7, 8))
+```
+:::
+
+::: {.column width="50%"}
+``` python
+pd.DataFrame({'a': [1,2,3,4], 
+              'b': [5,6,7,8]})
+```
+:::
+:::::
+
+## Resources
+
+-   [Python for Data Analysis, 3E](https://wesmckinney.com/book) by Wes McKinney
+
+-   [The Carpenteries: Python Novice gapminder](https://swcarpentry.github.io/python-novice-gapminder/)
+
+-   [Python Data Science Handbook](https://jakevdp.github.io/PythonDataScienceHandbook/) by Jake VanderPlas
+
+-   [Python for Everybody](https://www.py4e.com/) by Charles Severance
+
+-   [Python Crash Course](https://ehmatthes.github.io/pcc_2e/) by Eric Matthes
+
+-   [Automate the Boring Stuff with Python](https://automatetheboringstuff.com/) by Al Sweigart
