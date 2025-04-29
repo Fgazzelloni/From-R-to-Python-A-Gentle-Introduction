@@ -1,0 +1,34 @@
+project:
+  type: website
+
+website:
+  page-navigation: true
+  title: "From R to Python: A Gentle Introduction"
+  site-url: "" 
+  repo-url: https://github.com/Fgazzelloni/From-R-to-Python-A-Gentle-Introduction
+  repo-actions: [edit, issue]
+  
+  page-footer:
+    right: "This page is built with ❤️ and [Quarto](https://quarto.org/)."
+    left: "&copy; CC-By R-Ladeis Rome 2025"  
+  
+  sidebar:
+    logo: "images/r-to-py.png"
+    style: "docked"
+    search: true
+    collapse-level: 1
+    contents:
+      - href: index.qmd
+        text: Home
+      - href: hands-on1.qmd
+        text: "Part 1: Python Syntax"
+      - href: hands-on2.qmd 
+        text: "Part 2: Python Libraries"
+
+format:
+  html:
+    theme: cosmo
+    toc: true
+
+editor: visual
+

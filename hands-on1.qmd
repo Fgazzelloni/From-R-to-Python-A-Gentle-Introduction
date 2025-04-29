@@ -1,0 +1,235 @@
+---
+title: "From R to Python: A Gentle Introduction"
+subtitle: "Part 1: Python Syntax"
+author: "Federica Gazzelloni"
+format: 
+  html:
+    toc: true
+editor: visual
+execute:
+  warning: false
+  message: false
+---
+
+## Introduction
+
+This Python course introduction is designed for R users who want to learn Python. It covers the basics of Python programming, including syntax, data types, and control structures. The course also includes practical examples and exercises to help you apply what you've learned.
+
+## Python Basics
+
+Python is a standalone application installed system-wide on your computer.
+
+-   When you installed Python 3, it automatically created a command line program called python3.
+-   That program is in your PATH (a system setting telling your terminal where to find programs).
+-   You can run Python code in a terminal or command prompt by typing `python3` and pressing Enter.
+-   This will open the Python interpreter, where you can type Python code and see the results immediately.
+-   To exit the Python interpreter, type `exit()` or press `Ctrl + D` (on Unix/Linux) or `Ctrl + Z` (on Windows).
+
+``` bash
+$ python3
+```
+
+R is also installed as a program (e.g., via CRAN), but it usually installs a GUI (R.app on Mac) — and a command-line version. - The terminal command for R is just:
+
+``` bash
+$ R
+```
+
+-   BUT, you need to have the path to the R executable correctly set in your PATH variable.
+-   Sometimes, depending on how R was installed, the R command is already available — but sometimes it’s not linked automatically.
+
+## Syntax Differences
+
+Python and R have different syntax, but they share many similarities. In this section, we will cover some of the basic syntax differences between Python and R.
+
+## Printing Output
+
+Let's get started with some basic Python syntax.
+
+The `print()` function is used to display output, both in Python and R.
+
+In Python, you can print text to the console using the `print()` function. For example:
+
+```{python}
+print("Hello from Python!")
+```
+
+But if you are using an editor, you can also display output without using the `print()` function. For example:
+
+```{python}
+"Hello from Python!"
+```
+
+Same as in R, you can display output without using the `print()` function. For example:
+
+```{r}
+"Hello from R!"
+```
+
+In summary, in the terminal/console you can often skip print(), while in a script or program "you **must** use print() to show results".
+
+This is valid also for R , if you source a script (using `source("script.R")` or pressing "Run All" in RStudio), the default is not to show simple expression results unless you use print() command.
+
+## Variables and Data Types
+
+In Python, you can create variables and assign values to them using the `=` operator. For example:
+
+```{python}
+x = 5
+y = "Hello"
+z = 3.14
+
+x; y; z
+```
+
+```{python}
+print(x, y, z)
+```
+
+As well in R, but you can also create variables using the `<-` operator. For example:
+
+```{r}
+x <- 5
+y = "Hello"
+z <- 3.14
+
+x; y; z
+```
+
+```{r}
+#| eval: false
+print(x, y, z)
+# Error in print.default(x, y, z) : invalid printing digits -2147483648
+```
+
+In Python, you can check the type of a variable using the `type()` function. For example:
+
+```{python}
+type(x)
+type(y)
+type(z)
+```
+
+In R, you can check the type of a variable using the `class()` function. For example:
+
+```{r}
+class(x)  
+class(y)  
+class(z)  
+```
+
+## Lists and Tuples
+
+In this first section, we will work outside the library boxes. And as you can notice base Python looks quite similar to base R.
+
+In Python, you can create a list using square brackets `[]`. For example:
+
+```{python}
+my_list = [1, 2, 3, "Hello"]
+my_list
+```
+
+In R, you can create a list using the `list()` function. For example:
+
+```{r}
+my_list <- list(1, 2, 3, "Hello")
+my_list
+```
+
+In Python, you can create a `tuple` using parentheses `()`. For example:
+
+```{python}
+my_tuple = (1, 2, 3, "Hello")
+my_tuple
+```
+
+`What is a tuple?` A tuple is a collection of ordered elements, similar to a list, but tuples are immutable, meaning they cannot be changed after creation.
+
+In R, there is no direct equivalent of a Python tuple. R does not have a special immutable ordered collection like Python tuples, but you can create a similar structure using the `c()` function, which is used to combine values into a vector. For example:
+
+```{r}
+my_vector <- c(1, 2, 3, "Hello")
+my_vector
+```
+
+In Python you can create list, tuple, set, dictionary, and dataframe, while in R you can create vector, list, matrix, dataframe.
+
+## Dictionaries and Data Frames
+
+In Python, you can create a dictionary using the `dict()` function or by using curly braces `{}`. For example:
+
+```{python}
+my_dict = dict(name="Alice", age=25, city="New York")
+my_dict
+```
+
+```{python}
+my_dict = {"name": "Alice", "age": 25, "city": "New York"}
+my_dict
+```
+
+A dictionary is a collection of key-value pairs, where each key is unique and maps to a value. You can access the values in a dictionary using the keys.
+
+```{python}
+my_dict["name"]
+my_dict["age"]
+my_dict["city"]
+```
+
+In R, you can create a data frame using the `data.frame()` function. For example:
+
+```{r}
+my_df <- data.frame(name = c("Alice", "Bob"), 
+                    age = c(25, 30), 
+                    city = c("New York", "Los Angeles"))
+my_df
+```
+
+In R, you can access data frame values using the `$` operator or by using the `[]` operator. For example:
+
+```{r}
+my_df$name
+my_df$age  
+my_df[, "city"]
+```
+
+There are similarities between Python structure to access data frame values and R structure to access data frame values.
+
+## Indexing
+
+In Python, you can access list elements using indices. For example:
+
+```{python}
+my_list = [1, 2, 3, "Hello"]
+my_list[0]  # Access the first element
+my_list[1]  # Access the second element
+```
+
+In R, you can access list elements using indices as well. For example:
+
+```{r}
+my_list <- list(1, 2, 3, "Hello")
+my_list[[1]]  # Access the first element
+my_list[[2]]  # Access the second element
+```
+
+The difference is also that in Python you start counting from 0, while in R you start counting from 1.
+
+And, you can use negative indices to access elements from the end of the list.
+
+## Summary
+
+| Concept | **Python** | **R** |
+|:----------------------|:----------------------------|:-------------------|
+| **Indexing** | Starts at 0 | Starts at 1 |
+| **Slicing** | `x[0:3]` → includes 0, 1, 2 (excludes 3) | `x[1:3]` → includes 1, 2, 3 |
+| **Data Structures** | list, tuple, dict, set | vector, list, matrix, dataframe |
+| **Functions** | `def myfunc(x): return x+1` | `myfunc <- function(x) x+1` |
+| **Anonymous Functions** | `lambda x: x+1` | `function(x) x+1` |
+| **Loops** | `for`, `while`, `break`, `continue` | `for`, `while`, vectorized alternatives (`apply`, `map`) |
+| **Conditionals** | `if`, `elif`, `else` | `if`, `else if`, `else` |
+| **Packages** | Install with `pip` or `conda` | Install with `install.packages()` |
+| **Missing Values** | `None`, `np.nan` | `NA`, `NaN`, `NULL` |
+| **Assignments** | `=` or `:=` (newer) | `<-` or `=` |
+| **Comments** | `# single-line`, `''' multi-line '''` | `# single-line` |
+| **File I/O** | `open('file.txt')`, `pandas.read_csv()` | `read.csv()`, `read.table()` |

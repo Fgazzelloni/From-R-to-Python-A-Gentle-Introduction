@@ -1,0 +1,17 @@
+---
+title: "From R to Python: A Gentle Introduction"
+description: "R-Ladies Rome workshop"
+date: "04/27/2025"
+format: 
+  html:
+    toc: true
+---
+
+**This course is designed for R users as an introduction to the Python language.**
+
+## Instructor
+
+-   Name: **Federica Gazzelloni**
+-   Email: [fede.gazzelloni\@gmail.com](mailto:fede.gazzelloni@gmail.com){.email}
+-   Website: [federicagazzelloni.com](https://federicagazzelloni.com)
+-   LinkedIn: [federicagazzelloni](https://www.linkedin.com/in/federicagazzelloni/)

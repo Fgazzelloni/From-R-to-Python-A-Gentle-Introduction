@@ -2,3 +2,7 @@
   quarto-pub:
     - id: e48e4224-8c42-4cd6-b5c0-5285dcc9f256
       url: https://rladiesrome.quarto.pub/from-r-to-python-a-gentle-introduction
+- source: project
+  quarto-pub:
+    - id: cd025473-0161-4f46-a9ca-8b9b092b80f8
+      url: https://fgazzelloni.quarto.pub/from-r-to-python-a-gentle-introduction
